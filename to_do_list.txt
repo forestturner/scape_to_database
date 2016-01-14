@@ -1,0 +1,5 @@
+to do list 
+~create a more software engnieering appoarch 
+~console app -> that opens up window (maybe learn how to add arguments to run from command prompt.)
+~finish datebase video 5.
+~a lot more stuff (: 
