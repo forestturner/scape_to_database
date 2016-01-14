@@ -1,0 +1,16 @@
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\UsedCPUValue.exe.config
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\CPU_database.mdf
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\CPU_database_log.ldf
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\UsedCPUValue.exe
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\UsedCPUValue.pdb
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\EntityFramework.dll
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\HtmlAgilityPack.dll
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\Moonmile.ExDocPcl.Html.dll
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\EntityFramework.xml
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\HtmlAgilityPack.pdb
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\bin\Debug\HtmlAgilityPack.xml
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.csprojResolveAssemblyReference.cache
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.exe
+c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.pdb
