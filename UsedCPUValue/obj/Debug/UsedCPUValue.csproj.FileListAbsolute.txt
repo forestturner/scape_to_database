@@ -14,3 +14,5 @@ c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\
 c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.csprojResolveAssemblyReference.cache
 c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.exe
 c:\users\forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.pdb
+C:\Users\Forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.Chart.resources
+C:\Users\Forest\documents\visual studio 2013\Projects\UsedCPUValue\UsedCPUValue\obj\Debug\UsedCPUValue.csproj.GenerateResource.Cache

@@ -36,6 +36,11 @@
             CPU_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
+            // CPU_name
+            // 
+            CPU_name.Text = "CPU_name";
+            CPU_name.Width = 203;
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -49,11 +54,6 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // CPU_name
-            // 
-            CPU_name.Text = "CPU_name";
-            CPU_name.Width = 203;
             // 
             // CPU_rating
             // 
@@ -74,10 +74,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 452);
+            this.ClientSize = new System.Drawing.Size(863, 477);
             this.Controls.Add(this.listView1);
             this.Name = "Chart";
             this.Text = "Chart";
+            this.Load += new System.EventHandler(this.Chart_Load);
             this.ResumeLayout(false);
 
         }
