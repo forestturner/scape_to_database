@@ -25,10 +25,13 @@ namespace UsedCPUValue
             {
                 
                 List<CPUData> cpu_list =  DBconnection.GetCPU();
+                int i = 0;
                 foreach (CPUData data in cpu_list)
                 {
                     listView1.Items.Add(data.CPU_NAME);
-                    listView1.Items.Add(data.CPU_RATING);
+                    //listView1.Items.SubItems.Add(data.CPU_RATING);
+                    listView1.Items[i].SubItems.Add(data.CPU_RATING);
+                    i++;
                 }
             
                 //if (cpu_list.Count > 0)

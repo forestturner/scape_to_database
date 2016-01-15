@@ -33,32 +33,39 @@ namespace UsedCPUValue
         public List<CPUData> GameRankingsFromPage()//int pageNum)
         {
             string url = "https://www.cpubenchmark.net/high_end_cpus.html#";
-            //if (pageNum != 0)
-              //  url = "http://www.gamerankings.com/browse.html?page=" + pageNum.ToString();
+
             WebClient client = new WebClient();
             string response = client.DownloadString(url);
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(response);
-           // var test = doc.DocumentNode.SelectNodes(node);
-            //var doc = await Task.Factory.StartNew(() => web.Load(url));
-            ////*/a
-            var nameNodes = doc.DocumentNode.SelectNodes("//*/a");
-            // //*/div/text()
-            var ratingNodes = doc.DocumentNode.SelectNodes("//*/div/text()");
-           // var numReviewNodes = doc.DocumentNode.SelectNodes("//*[@id=\"main_col\"]/div//div[2]/table//tr//td[4]");
-            //If these are null it means the name/score nodes couldn't be found on the html page
-            if (nameNodes == null || ratingNodes == null )//|| numReviewNodes == null)
-                return new List<CPUData>();
+
+            var nameNodes = doc.DocumentNode.SelectNodes("//*[@id]/a");
+            var scoreNodes = doc.DocumentNode.SelectNodes("//*[@id]/div/text()");
 
             var names = nameNodes.Select(node => node.InnerText).ToList();
-            var scores = ratingNodes.Select(node => node.InnerText).ToList();
-            //var numReviews = numReviewNodes.Select(node => node.LastChild.InnerText).ToList();
+            var scores = scoreNodes.Select(node => node.InnerText).ToList();
 
             List<CPUData> toReturn = new List<CPUData>();
-           // for (int i = 0; i < names.Count(); ++i)
-            for (int i = 0; i < 500; ++i)
-                toReturn.Add(new CPUData() { CPU_NAME = names[i], CPU_RATING = scores[i]});//, NumReviews = numReviews[i] });
+            int j = 0;
+            for (int i = 0; i < 500; i++)
+            {
+               
+                string temp_s = scores[j];;
 
+                Char[] ch = temp_s.ToCharArray();
+                char n1 = '\n';
+                char n2 = ' ';
+
+                while (ch[0].CompareTo(n1) == 0 || ch[0].CompareTo(n2) == 0)
+                {
+
+                    temp_s = scores[j];
+                    ch = temp_s.ToCharArray();
+                    j++;
+                }
+
+                     toReturn.Add(new CPUData() { CPU_NAME = names[i], CPU_RATING = scores[j-1]});
+             }
             return toReturn;
         }
     }
@@ -170,7 +177,52 @@ namespace GetGameRankingData
         }
     }
 }
+  var nameNodes = doc.DocumentNode.SelectNodes("//*[@id]/a");
+            var scoreNodes = doc.DocumentNode.SelectNodes("//*[@id]/div/text()");
+            //If these are null it means the name/score nodes couldn't be found on the html page
+          //  if (nameNodes == null || scoreNodes == null ) //numReviewNodes == null)
+            //    return new List<GameReview>();
 
+            var names = nameNodes.Select(node => node.InnerText).ToList();
+            var scores = scoreNodes.Select(node => node.InnerText).ToList();
+            //var numReviews = numReviewNodes.Select(node => node.LastChild.InnerText).ToList();
+
+            List<GameReview> toReturn = new List<GameReview>();
+            int j = 0;
+            for (int i = 0; i < 500; i++)
+            {
+               
+                string temp_s = scores[j];;
+               // int blah = Convert.ToInt32(temp_s);
+                //Console.WriteLine(blah);
+                Char[] ch = temp_s.ToCharArray();
+                char n1 = '\n';
+                char n2 = ' ';
+              //  textBox1.AppendText("score = before while loop = "+ scores[j-1]);
+                while (ch[0].CompareTo(n1) == 0 || ch[0].CompareTo(n2) == 0)
+                {
+                    //textBox1.AppendText("noo");
+                       // ("noob");
+                    temp_s = scores[j];
+                    ch = temp_s.ToCharArray();
+                    //textBox1.AppendText(j.ToString());
+                    //textBox1.AppendText("------------");
+                    j++;
+                    //textBox1.AppendText(j.ToString());
+                   // textBox1.AppendText("max size = " + scores.Count);
+                    
+                   // ch = temp_s.ToCharArray();
+                }
+                //if (Convert.ToInt32(scores[j]) > 0)
+                //{
+                Console.WriteLine("noob");
+                    toReturn.Add(new GameReview() { Name = names[i], Score = scores[j-1] });//, NumReviews = numReviews[i] });
+             }
+        
+               // toReturn.Add(new GameReview() { Name = names[i], Score = scores[i] });//, NumReviews = numReviews[i] });
+
+            return toReturn;
+        }
  
  
  */

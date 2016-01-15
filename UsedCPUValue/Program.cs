@@ -13,6 +13,7 @@ namespace UsedCPUValue
         {
             List<CPUData> list = new List<CPUData>();
             Scrap scrap = new Scrap();
+            DBconnection.DeleteDB();
             ////*[@id="rt2368"]/div/text()
             ////*[@id="rt2069"]/div/text()
             //*/div/text()

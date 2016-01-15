@@ -38,7 +38,8 @@ namespace UsedCPUValue
         {
             List<CPUData> cpu_list = new List<CPUData>();
             SqlConnection conn = getConnection();
-            string select_statement = "SELECT * FROM CPU ORDER BY CPU_rating";
+           // string select_statement = "SELECT * FROM CPU ORDER BY CPU_rating";
+            string select_statement = "SELECT * FROM CPU";
             SqlCommand select_command = new SqlCommand(select_statement,conn);
             try
             {
@@ -58,6 +59,22 @@ namespace UsedCPUValue
             catch (SqlException ex) { throw ex; }
             finally { conn.Close(); }
             return cpu_list;
+        }
+        public static void DeleteDB()
+        {
+            SqlConnection conn = getConnection();
+            string delete_statement = "DELETE FROM CPU";
+            SqlCommand insert_command = new SqlCommand(delete_statement, conn);
+            try { conn.Open(); insert_command.ExecuteNonQuery(); }
+            catch (SqlException ex) { throw ex; }
+            finally { conn.Close(); }
+          //  SqlConnection con = new SqlConnection(ConfigurationSettings.AppSettings["con"]);
+           // SqlCommand cmd = new SqlCommand();
+           // cmd.CommandText = "DELETE FROM CPU";
+           // cmd.Connection = con;
+          //  con.Open();
+          //  cmd.ExecuteNonQuery();
+          //  con.Close();
         }
     }
 }
